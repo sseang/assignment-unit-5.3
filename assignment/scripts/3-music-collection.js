@@ -1,6 +1,9 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
+console.log('Hello');
 
+//[]- Create an empty array named `myCollection`.
+let myCollection = [];
 
 
 
