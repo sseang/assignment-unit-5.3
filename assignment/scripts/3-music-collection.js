@@ -55,22 +55,28 @@ function addToCollection(collectionArray, title, artist, yearPublished) {
   return collectionObj;
 }
 console.log('Album 1', addToCollection(myCollection, myAlbums.title, myAlbums.artist, myAlbums.yearPublished));
-// console.log('Album 2', addToCollection(myCollection, myAlbums2.title, myAlbums2.artist, myAlbums2.yearPublished));
-// console.log('Album 3', addToCollection(myCollection, myAlbums3.title, myAlbums3.artist, myAlbums3.yearPublished));
-// console.log('Album 4', addToCollection(myCollection, myAlbums4.title, myAlbums4.artist, myAlbums4.yearPublished));
-// console.log('Album 5', addToCollection(myCollection, myAlbums5.title, myAlbums5.artist, myAlbums5.yearPublished));
-console.log('Album 6', addToCollection(myCollection, myAlbums6.title, myAlbums6.artist, myAlbums6.yearPublished));
-console.log('Album 6', addToCollection(myCollection, 'Master of Puppets', 'Metallica', 1986 ));
+
+//add 6 albums
+//Set parameter in console log duh!
+console.log('Album 2', addToCollection(myCollection, 'Master of Puppets', 'Metallica', 1986 ));
+console.log('Album 3', addToCollection(myCollection, 'Thank you', 'The NBHD', 2012 ));
+console.log('Album 4', addToCollection(myCollection, 'First Love', 'Utada Hikaru', 1999 ));
+console.log('Album 5', addToCollection(myCollection, 'Awake', 'Dream Theater', 1994 ));
+console.log('Album 6', addToCollection(myCollection, 'Dark Side Of The Moon', 'Pink Floyd', 1973 ));
 
 console.log("Entire collection album ALL: " + JSON.stringify(myCollection));
 
+function showCollection(showArray) {
+  let showAlbums = 0;
 
+  for (let i = 0; i < showArray.length; i++) {
+    showAlbums = showArray[i];
+    console.log(`${showAlbums.title}, by ${showAlbums.artist}, published in ${showAlbums.yearPublished}`);
+  }
+  return showAlbums;
+}
 
-
-
-
-
-
+console.log(showCollection(myCollection));
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
