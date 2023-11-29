@@ -71,12 +71,28 @@ function showCollection(showArray) {
 
   for (let i = 0; i < showArray.length; i++) {
     showAlbums = showArray[i];
-    console.log(`${showAlbums.title}, by ${showAlbums.artist}, published in ${showAlbums.yearPublished}`);
+    console.log(`${showAlbums.title} by ${showAlbums.artist}, published in ${showAlbums.yearPublished}`);
   }
-  return showAlbums;
+  return showArray.length;
 }
 
-console.log(showCollection(myCollection));
+console.log('Get it!', showCollection(myCollection));
+
+function findByArtist (collection, artist){
+  console.log('Find artist funtion');
+  const searchArtist = [];
+  console.log('Search', searchArtist);
+  for (let album of collection) {
+    if (album.artist === artist) {
+      console.log(album);
+      searchArtist.push(album);
+    }
+  }
+  return searchArtist;
+}
+
+//console.log('Find my artist', findByArtist(myCollection, 'Dream Theater'));
+
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
