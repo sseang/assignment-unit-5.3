@@ -67,31 +67,32 @@ console.log('Album 6', addToCollection(myCollection, 'Dark Side Of The Moon', 'P
 console.log("Entire collection album ALL: " + JSON.stringify(myCollection));
 
 function showCollection(showArray) {
+  //console.log('In showCollection');
   let showAlbums = 0;
-
+  
   for (let i = 0; i < showArray.length; i++) {
     showAlbums = showArray[i];
     console.log(`${showAlbums.title} by ${showAlbums.artist}, published in ${showAlbums.yearPublished}`);
   }
-  return showArray.length;
+  return showArray;
 }
 
 console.log('Get it!', showCollection(myCollection));
 
 function findByArtist (collection, artist){
-  console.log('Find artist funtion');
+  //console.log('Find artist function');
   const searchArtist = [];
-  console.log('Search', searchArtist);
+  //console.log('Search', searchArtist);
   for (let album of collection) {
+    //console.log(album);
     if (album.artist === artist) {
-      console.log(album);
       searchArtist.push(album);
     }
   }
   return searchArtist;
 }
 
-//console.log('Find my artist', findByArtist(myCollection, 'Dream Theater'));
+console.log('Find my artist:', findByArtist(myCollection, 'Black Sabbath'));
 
 
 
